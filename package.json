@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "dev": "parcel --target dev"
+  },
+  "devDependencies": {
+    "@parcel/config-default": "^2.0.1",
+    "@parcel/core": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1",
+    "autoprefixer": "^10.4.0",
+    "parcel": "^2.0.1",
+    "postcss": "^8.4.5",
+    "postcss-nested": "^5.0.6",
+    "tailwindcss": "^3.0.7"
+  },
+  "targets": {
+    "dev": {
+      "source": "dev/index.html",
+      "includeNodeModules": {
+        "xhr2": false
+      }
+    }
+  }
+}
