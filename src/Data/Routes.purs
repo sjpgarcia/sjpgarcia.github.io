@@ -16,7 +16,7 @@ data Route
 derive instance Generic Route _
 derive instance Eq Route
 
-codec :: RouteDuplex' Route
+codec ∷ RouteDuplex' Route
 codec = root $ sum
   { "Home": noArgs
   , "NotFound": "404.html" / noArgs
