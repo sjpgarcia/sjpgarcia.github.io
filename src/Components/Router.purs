@@ -16,6 +16,7 @@ import Type.Proxy (Proxy(..))
 import Website.Data.Routes (Route(..))
 import Website.Pages.Home as Home
 import Website.Pages.NotFound as NotFound
+import Website.Utils (class_)
 
 data Query a = Navigate Route a
 
@@ -56,12 +57,14 @@ component =
   -- 2. The slot label is to a group of components, as an address is
   --    to the individual components themselves. This allows us to
   --    either query groups of components or just one.
-  render = case _ of
-    Home ->
-      HH.slot_ (Proxy :: _ "home") unit Home.component unit
-    NotFound ->
-      HH.slot_ (Proxy :: _ "notFound") unit NotFound.component unit
-
+  render route = 
+    HH.div [ class_ "md:px-32 md:py-2" ]
+      [ case route of 
+        Home -> 
+          HH.slot_ (Proxy :: _ "home") unit Home.component unit
+        NotFound ->
+          HH.slot_ (Proxy :: _ "notFound") unit NotFound.component unit
+      ]
   -- The type annotations are here to ensure that the `a` parameter
   -- does not escape its skolem scope due to type inference. But...
   -- why? Halogen is built on the concept of free monads, and this `a`
