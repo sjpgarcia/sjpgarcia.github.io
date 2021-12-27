@@ -53,7 +53,7 @@ component =
           , HH.text "For my academic work: "
           , hyperlink "sjpgarcia" "https://github.com/sjpgarcia"
           ]
-      , HH.slot (Proxy ∷ "footer") unit Footer.component unit
+      , HH.slot_ (Proxy ∷ _ "footer") unit Footer.component unit
       ]
 
   underlined text color =

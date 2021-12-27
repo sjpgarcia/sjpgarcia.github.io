@@ -1,7 +1,7 @@
 tasks:
   - name: Install PNPM
     before: |
-      curl -fsSL https://get.pnpm.io/install.sh | sh -
+      SHELL=bash curl -fsSL https://get.pnpm.io/install.sh | sh -
       pnpm env use --global 16
   
   - name: Install PureScript
