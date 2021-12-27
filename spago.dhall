@@ -1,7 +1,6 @@
 { name = "website"
 , dependencies =
   [ "aff"
-  , "console"
   , "effect"
   , "either"
   , "halogen"
@@ -14,7 +13,6 @@
   , "routing-duplex"
   , "safe-coerce"
   , "simple-json"
-  , "typelevel-prelude"
   , "web-html"
   ]
 , packages = ./packages.dhall
