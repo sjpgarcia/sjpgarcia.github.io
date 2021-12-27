@@ -1,0 +1,13 @@
+tasks:
+  - name: Install PNPM
+    before: |
+      curl -fsSL https://get.pnpm.io/install.sh | sh -
+      pnpm env use --global 16
+  
+  - name: Install PureScript
+    before: pnpm add -g purescript spago purs-tidy
+
+vscode:
+  extensions:
+    - https://github.com/sjpgarcia/vscode-language-purescript/releases/download/v0.2.7/nwolverson.language-purescript-0.2.7.vsix
+    - https://github.com/sjpgarcia/vscode-ide-purescript/releases/download/v0.25.5/nwolverson.ide-purescript-0.25.6.vsix
