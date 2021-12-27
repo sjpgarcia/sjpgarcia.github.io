@@ -1,7 +1,11 @@
 let app
 
 function main() {
+  if (process.env.NODE_ENV === "production") {
+    app = require("../dist/index.js").main()
+  } else {
     app = require("../output/Main/index.js").main()
+  }
 }
 
 if (module.hot) {

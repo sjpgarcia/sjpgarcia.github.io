@@ -10,4 +10,5 @@
 /.spago
 /.parcel-cache
 /.pnpm-debug.log
+/dist
 /public

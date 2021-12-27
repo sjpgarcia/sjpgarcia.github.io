@@ -2,8 +2,11 @@
   "scripts": {
     "postinstall": "spago install",
     "dev": "concurrently pnpm:dev:css pnpm:dev:serve",
-    "dev:css": "tailwindcss -w -i scss/tailwind.scss -o dev/index.css",
-    "dev:serve": "parcel serve --target dev --dist-dir public"
+    "dev:css": "tailwindcss -w -i scss/tailwind.scss -o dist/index.css",
+    "dev:serve": "parcel serve",
+    "bundle:css": "tailwindcss -i scss/tailwind.scss -o dist/index.css",
+    "bundle:purs": "spago bundle-app -t dist/index.js",
+    "bundle": "pnpm bundle:css && pnpm bundle:purs && parcel build"
   },
   "devDependencies": {
     "@parcel/config-default": "^2.0.1",
@@ -17,8 +20,9 @@
     "tailwindcss": "^3.0.7"
   },
   "targets": {
-    "dev": {
+    "default": {
       "source": "dev/index.html",
+      "distDir": "public",
       "includeNodeModules": {
         "xhr2": false
       }
