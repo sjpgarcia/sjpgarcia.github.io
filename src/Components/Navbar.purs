@@ -20,25 +20,23 @@ component =
   initialState _ = unit
 
   render _ =
-    HH.div_
-    [ HH.nav
-      [ class_
-          """
-            gap-2 h-16 p-2 flex flex-row
-            justify-items-center items-center
-          """
+    HH.nav
+    [ class_
+        """
+          gap-2 h-16 p-2 flex flex-row
+          justify-items-center items-center
+        """
+    ]
+    [ HH.img
+      [ HP.src "https://avatars.githubusercontent.com/u/91515796?v=4"
+      , HP.alt "A logo representing a textured green cube"
+      , HP.height 32
+      , HP.width 32
+      , class_ "m-2 rounded-full"
       ]
-      [ HH.img
-        [ HP.src "https://avatars.githubusercontent.com/u/91515796?v=4"
-        , HP.alt "A logo representing a textured green cube"
-        , HP.height 32
-        , HP.width 32
-        , class_ "m-2 rounded-full"
-        ]
-      , HH.span
-        [ class_ "font-comfortaa text-white text-2xl flex-grow"
-        ]
-        [ HH.text "sjpgarcia's page"
-        ]
+    , HH.span
+      [ class_ "font-comfortaa text-white text-2xl flex-grow"
+      ]
+      [ HH.text "sjpgarcia's page"
       ]
     ]
