@@ -24,7 +24,7 @@ component =
   initialState _ = unit
 
   render _ =
-    HH.div_
+    HH.div [ class_ "flex flex-col min-h-screen" ]
     [ HH.slot_ (Proxy :: _ "navbar") unit Navbar.component unit
     , HH.article [ class_ "font-oswald font-extralight text-white text-2xl m-4" ]
       [ HH.text "My name is "
@@ -52,6 +52,7 @@ component =
       , HH.text "For my academic work: "
       , hyperlink "sjpgarcia" "https://github.com/sjpgarcia"
       ]
+    , HH.slot (Proxy :: "footer") unit Footer.component unit
     ]
 
   underlined text color =
