@@ -9,6 +9,7 @@ import Halogen.HTML as HH
 import Halogen.HTML.Properties as HP
 import Type.Proxy (Proxy(..))
 import Website.Components.Navbar as Navbar
+import Website.Components.Footer as Footer
 import Website.Utils (class_)
 
 data Tuple a b = Tuple a b
