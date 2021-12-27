@@ -23,8 +23,7 @@ component =
     HH.nav
       [ class_
           """
-          gap-2 h-16 p-2 flex flex-row
-          justify-items-center items-center
+          gap-2 h-16 p-2 flex flex-row items-center
         """
       ]
       [ HH.img
