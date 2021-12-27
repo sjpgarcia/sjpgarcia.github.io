@@ -22,9 +22,8 @@ component =
     HH.footer
       [ class_
           """
-          flex justify-items-center
-          font-comfortaa font-light
-          text-lg text-white text-center
+          flex items-center justify-center
+          font-comfortaa font-light text-lg text-white text-center
           h-16 mt-auto 
         """
       ]
