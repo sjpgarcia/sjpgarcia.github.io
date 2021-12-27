@@ -5,7 +5,6 @@ import Prelude
 import Effect.Aff.Class (class MonadAff)
 import Halogen as H
 import Halogen.HTML as HH
-import Halogen.HTML.Properties as HP
 import Type.Proxy (Proxy(..))
 import Website.Components.Navbar as Navbar
 

@@ -2,7 +2,6 @@ module Website.Data.Routes where
 
 import Prelude hiding ((/))
 
-import Data.Eq (class Eq)
 import Data.Generic.Rep (class Generic)
 import Routing.Duplex (RouteDuplex', root)
 import Routing.Duplex.Generic (noArgs, sum)
