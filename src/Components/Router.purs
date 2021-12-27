@@ -1,5 +1,3 @@
--- | The Router Component
--- |
 -- | This component is the top-most component in the application, and is
 -- | responsible for routing the user around the single-page application.
 -- | It takes the starting `Route` as input, and can be queried in order

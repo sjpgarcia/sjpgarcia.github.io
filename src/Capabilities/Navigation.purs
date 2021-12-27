@@ -1,3 +1,6 @@
+-- | This module provides a high-level interface for navigating
+-- | through the different pages in the application. A concrete
+-- | implementation exists in the `AppM` module.
 module Website.Capabilities.Navigation where
 
 import Prelude

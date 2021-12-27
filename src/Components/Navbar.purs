@@ -1,3 +1,4 @@
+-- | This is a static component used in different pages.
 module Website.Components.Navbar where
 
 import Prelude

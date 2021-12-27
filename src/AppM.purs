@@ -1,3 +1,5 @@
+-- | This module contains the application monad as well as
+-- | implementations of the different capabilities.
 module Website.AppM where
 
 import Prelude

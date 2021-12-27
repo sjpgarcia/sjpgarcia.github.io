@@ -1,3 +1,4 @@
+-- | This module contains the global state store.
 module Website.Store where
 
 import Routing.PushState (PushStateInterface)

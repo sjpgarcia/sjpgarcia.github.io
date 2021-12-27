@@ -1,3 +1,4 @@
+-- | This module contains different utilities.
 module Website.Utils where
 
 import Halogen as H

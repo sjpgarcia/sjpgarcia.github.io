@@ -1,3 +1,5 @@
+-- | This module contains the data type for the site's routes as
+-- | well as its corresponding codec for parsing and printing.
 module Website.Data.Routes where
 
 import Prelude hiding ((/))

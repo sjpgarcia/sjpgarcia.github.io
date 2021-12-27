@@ -1,3 +1,4 @@
+-- | The 404 page.
 module Website.Pages.NotFound where
 
 import Prelude

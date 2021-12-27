@@ -1,3 +1,4 @@
+-- | The home page.
 module Website.Pages.Home where
 
 import Prelude
