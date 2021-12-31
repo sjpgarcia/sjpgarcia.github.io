@@ -54,11 +54,8 @@ component =
           , hyperlink "sjpgarcia" "https://github.com/sjpgarcia"
           , HH.br_
           , HH.br_
-          , HH.text
-              """
-              I'm not actively looking for career opportunities in the
-              functional programming space, although offers are appreciated.
-              """
+          , HH.text "I'm not actively looking for career opportunities in the "
+          , HH.text "functional programming space, although offers are appreciated."
           ]
       , HH.slot_ (Proxy ∷ _ "footer") unit Footer.component unit
       ]
