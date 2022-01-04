@@ -10,5 +10,6 @@
 /.spago
 /.parcel-cache
 /.pnpm-debug.log
-/dist
-/public
+/public/*.css
+/public/*.js
+index-dev.js

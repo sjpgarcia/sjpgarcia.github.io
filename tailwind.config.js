@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "dev/index.html",
+    "public/index.html",
     "src/**/*.purs",
   ],
   darkMode: 'media',

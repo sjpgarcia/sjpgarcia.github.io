@@ -2,30 +2,21 @@
   "scripts": {
     "postinstall": "spago install",
     "dev": "concurrently pnpm:dev:css pnpm:dev:serve",
-    "dev:css": "tailwindcss -w -i scss/tailwind.scss -o dist/index.css",
-    "dev:serve": "parcel serve",
-    "bundle:css": "tailwindcss -i scss/tailwind.scss -o dist/index.css",
-    "bundle:purs": "spago bundle-app -t dist/index.js",
-    "bundle": "pnpm bundle:css && pnpm bundle:purs && parcel build"
+    "dev:css": "tailwindcss -w -i scss/tailwind.scss -o public/index.css",
+    "dev:serve": "esbuild --bundle dev/index.js --servedir=public",
+    "bundle:css": "tailwindcss -i scss/tailwind.scss -o public/index.css",
+    "bundle:esbuild": "esbuild --bundle --minify index-dev.js --outfile=public/index.js",
+    "bundle:purs": "spago bundle-app -t index-dev.js",
+    "bundle": "pnpm bundle:css && pnpm bundle:purs && pnpm bundle:esbuild",
+    "serve": "http-server public"
   },
   "devDependencies": {
-    "@parcel/config-default": "^2.0.1",
-    "@parcel/core": "^2.0.1",
-    "@parcel/transformer-sass": "^2.0.1",
     "autoprefixer": "^10.4.0",
     "concurrently": "^6.5.1",
-    "parcel": "^2.0.1",
+    "esbuild": "^0.14.10",
+    "http-server": "^14.0.0",
     "postcss": "^8.4.5",
     "postcss-nested": "^5.0.6",
     "tailwindcss": "^3.0.7"
-  },
-  "targets": {
-    "default": {
-      "source": "dev/index.html",
-      "distDir": "public",
-      "includeNodeModules": {
-        "xhr2": false
-      }
-    }
   }
 }
